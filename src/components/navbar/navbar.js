@@ -26,8 +26,6 @@ export const Navbar = () => {
           <img src="./imgs/cart4.svg" alt="carrito" />
         </div>
 
-
-
       </nav>
     </header>
   );
