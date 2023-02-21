@@ -1,0 +1,28 @@
+.navbar_container {
+  background-color: rgb(221, 183, 120);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_container .logo img {
+  width: 3rem;
+  margin: 1.5rem 3rem;
+}
+.navbar_container .navbar {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar_container .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.navbar_container .cart {
+  width: 10rem;
+  display: flex;
+}
+.navbar_container .cart img {
+  width: 3rem;
+}/*# sourceMappingURL=navbar.css.map */
