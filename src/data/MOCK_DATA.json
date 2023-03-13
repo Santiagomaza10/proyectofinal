@@ -1,0 +1,57 @@
+[
+
+    {
+        "id": 1,
+        "name": "taza 1",
+        "description": "lorem 1",
+        "price": 1000,
+        "img": ".././imgs/productos_img/taza1.jpg",
+        "category": "tazas"
+    },
+  
+    {
+      "id": 2,
+      "name": "taza 2",
+      "description": "lorem 2",
+      "price": 2000,
+      "img": ".././imgs/productos_img/taza2.jpg",
+      "category": "tazas"
+  },
+  
+  {
+      "id": 3,
+      "name": "plato 1",
+      "description": "lorem 3",
+      "price": 3000,
+      "img": ".././imgs/productos_img/plato1.jpg",
+      "category": "platos"
+  },
+  
+  {
+    "id": 4,
+    "name": "plato 2",
+    "description": "lorem 4",
+    "price": 4000,
+    "img": ".././imgs/productos_img/plato2.jpg",
+    "category": "platos"
+  },
+  
+  {
+    "id": 5,
+    "name": "cuenco 1",
+    "description": "lorem 5",
+    "price": 5000,
+    "img": ".././imgs/productos_img/cuenco1.jpg",
+    "category": "cuencos"
+  },
+  
+  
+  {
+    "id": 6,
+    "name": "cuenco 2",
+    "description": "lorem 6",
+    "price": 6000,
+    "img": ".././imgs/productos_img/cuenco2.jpg",
+    "category": "cuencos"
+  }
+  ]

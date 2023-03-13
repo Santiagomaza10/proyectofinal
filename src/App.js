@@ -1,15 +1,35 @@
 import { Navbar } from "./components/navbar/navbar";
-import "./components/navbar/navbar.scss"
-import { Itemlistcontainer } from "./components/itemlistcontainer/itemlistcontainer"
+import "./components/navbar/navbar.scss";
+import { Itemlistcontainer } from "./components/itemlistcontainer/itemlistcontainer";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+
+
+
       <Navbar />
 
-      <Itemlistcontainer nombre= "Cerámicas Lorem" direccion= "Av. del libertador 2154" mail= "contacto@ceramicaslorem.com"/>
+        <Routes>
 
-    </div>
+          <Route path="/" element= { <Itemlistcontainer /> } />
+
+          <Route path="/productos/:categoryId" element= { <Itemlistcontainer /> } />
+
+          <Route path="/detail/:itemId" element= { <ItemDetailContainer /> } />
+
+          <Route path="*" element= { <Navigate to="/" /> } />
+
+        </Routes>
+
+      
+
+
+
+    </BrowserRouter>
   );
 }
 

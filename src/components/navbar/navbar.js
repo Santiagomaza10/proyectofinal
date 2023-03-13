@@ -1,30 +1,31 @@
+import { Link } from "react-router-dom";
+import { Cartwidget } from "./cartwidget/cartwidget";
+
+
 export const Navbar = () => {
   return (
     <header className="navbar_container">
 
       <div className="logo">
-        <img src="./imgs/cup-hot.svg" />
+
+      <Link to="/"><img src=".././imgs/cup-hot.svg" /></Link>
+
         <h1>Cerámicas Lorem</h1>
       </div>
 
       <nav className="navbar">
         
         <ul>
-          <a href="#">
-            <li>Nosotros</li>
-          </a>
-          <a href="#">
-            <li>Productos</li>
-          </a>
-          <a href="#">
-            <li>Contacto</li>
-          </a>
+    
+          <Link to="/productos/tazas">    <li>Tazas</li>     </Link>
+          
+          <Link to="/productos/platos">    <li>Platos</li>    </Link>
+
+          <Link to="/productos/cuencos">    <li>Cuencos</li>     </Link>
+
         </ul>
 
-        <div className="cart">
-          <p>0</p>
-          <img src="./imgs/cart4.svg" alt="carrito" />
-        </div>
+        <Cartwidget/>
 
       </nav>
     </header>
