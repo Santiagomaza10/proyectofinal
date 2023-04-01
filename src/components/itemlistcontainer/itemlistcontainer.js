@@ -10,7 +10,6 @@ export const Itemlistcontainer = ({ nombre, direccion, mail }) => {
 
   const { categoryId } = useParams ();
 
-  console.log(categoryId)
 
   useEffect(() => {
 
@@ -26,20 +25,12 @@ export const Itemlistcontainer = ({ nombre, direccion, mail }) => {
       .finally(() => {
         setLoading(false);
       });
+      
   }, [categoryId]);
 
   return (
     <div className="itemlistcontainer">
-{/*       <h2 className="ilc-title">Bienvenidos a {nombre} !</h2>
-      <hr />
-      <p className="ilc-text">
-        {" "}
-        Cada colección evoca un sentimiento e implica una técnica diferente.
-        Equipá todo tu hogar con una misma impronta de diseño. <br /> Podes
-        escribirnos a {mail} o encontrarnos en {direccion}.{" "}
-      </p>
 
-      <hr /> */}
 
       {loading ? <h2>Cargando...</h2> : <ItemList items={productos} />}
     </div>

@@ -6,7 +6,7 @@ export const pedirDatos = () => {
   
       setTimeout (() => {
           resolve (MOCK_DATA)
-      }, 2000)
+      }, 500)
   
     })
     
@@ -19,7 +19,7 @@ export const pedirDatos = () => {
 
       setTimeout (() => {
           resolve (MOCK_DATA.find (prod => prod.id === id))
-      }, 2000)
+      }, 500)
     }
 
     )}

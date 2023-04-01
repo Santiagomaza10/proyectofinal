@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Cartwidget } from "./cartwidget/cartwidget";
-
+import { Cartwidget } from "./cartwidget/CartWidget.js";
+import "./navbar.scss";
 
 export const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ export const Navbar = () => {
 
       <div className="logo">
 
-      <Link to="/"><img src=".././imgs/cup-hot.svg" /></Link>
+      <Link to="/"><img src=".././imgs/cup-hot.svg" alt="Logo taza" /></Link>
 
         <h1>Cerámicas Lorem</h1>
       </div>
