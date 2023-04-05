@@ -1,5 +1,4 @@
 [
-
     {
         "id": 1,
         "name": "taza 1",
@@ -7,7 +6,7 @@
         "price": 1000,
         "img": ".././imgs/productos_img/taza1.jpg",
         "category": "tazas",
-        "stock": "10"
+        "stock": 3
     },
   
     {
@@ -17,7 +16,7 @@
       "price": 2000,
       "img": ".././imgs/productos_img/taza2.jpg",
       "category": "tazas",
-      "stock": "25"
+      "stock": 0
   },
   
   {
@@ -27,7 +26,7 @@
       "price": 3000,
       "img": ".././imgs/productos_img/plato1.jpg",
       "category": "platos",
-      "stock": "22"
+      "stock": 22
   },
   
   {
@@ -37,7 +36,7 @@
     "price": 4000,
     "img": ".././imgs/productos_img/plato2.jpg",
     "category": "platos",
-    "stock": "30"
+    "stock": 30
   },
   
   {
@@ -47,7 +46,7 @@
     "price": 5000,
     "img": ".././imgs/productos_img/cuenco1.jpg",
     "category": "cuencos",
-    "stock": "5"
+    "stock": 5
   },
   
   
@@ -58,6 +57,6 @@
     "price": 6000,
     "img": ".././imgs/productos_img/cuenco2.jpg",
     "category": "cuencos",
-    "stock": "18"
+    "stock": 18
   }
   ]

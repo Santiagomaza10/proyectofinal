@@ -1,12 +1,19 @@
-.cart {
+.cart-widget-active {
     font-size: 2rem;
     color: black;
     padding: 0rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-decoration: none;
+    opacity: 1;
+    transition: all .2s;
 
     span {
         padding: 1rem;
     }
+}
+
+.cart-widget-disabled {
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
 }

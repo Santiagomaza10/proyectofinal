@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Cartwidget } from "./cartwidget/CartWidget.js";
+import { BsFire } from "react-icons/bs";
 import "./navbar.scss";
 
 export const Navbar = () => {
@@ -8,26 +9,27 @@ export const Navbar = () => {
 
       <div className="logo">
 
-      <Link to="/"><img src=".././imgs/cup-hot.svg" alt="Logo taza" /></Link>
+      <Link to="/" className="logo"><BsFire /></Link>
 
-        <h1>Cerámicas Lorem</h1>
+      <Link to="/" className="title"><h1>Lorem - Piedras energéticas</h1></Link>
       </div>
 
       <nav className="navbar">
         
         <ul>
     
-          <Link to="/productos/tazas">    <li>Tazas</li>     </Link>
+          <Link to="/productos/colgantes">    <li>Colgantes</li>     </Link>
           
-          <Link to="/productos/platos">    <li>Platos</li>    </Link>
+          <Link to="/productos/pulseras">    <li>Pulseras</li>    </Link>
 
-          <Link to="/productos/cuencos">    <li>Cuencos</li>     </Link>
+          <Link to="/productos/piedras">    <li>Piedras</li>     </Link>
 
         </ul>
 
         <Cartwidget/>
 
       </nav>
+      
     </header>
   );
 };

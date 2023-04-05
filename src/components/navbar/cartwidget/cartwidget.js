@@ -7,11 +7,11 @@ import "./cart.scss"
 
 export const Cartwidget = () => {
 
-    const { totalCart } = useContext (CartContext)
+    const { cart, totalCart } = useContext (CartContext)
 
 
     return (
-        <Link to="/cart" className="cart">
+        <Link to="/cart" className={`${cart.length > 0 ? "cart-widget-active" : "cart-widget-disabled"}`}>
             <FaShoppingCart />
             <span> {totalCart()} </span>
         </Link>

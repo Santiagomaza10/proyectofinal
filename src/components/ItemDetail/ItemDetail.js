@@ -7,7 +7,6 @@ import { CartContext } from "../../Context/CartContext";
 export const ItemDetail = ({ item }) => {
   const { addCart, isInCart } = useContext(CartContext);
 
-
   const [counter, setCounter] = useState(1);
 
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ export const ItemDetail = ({ item }) => {
   const handleAgregar = () => {
     const newItem = {
       ...item,
-      counter
+      counter,
     };
 
     addCart(newItem);
@@ -32,18 +31,27 @@ export const ItemDetail = ({ item }) => {
       <p> {item.description} </p>
       <p>$ {item.price} </p>
 
+      {item.stock <= 5 && (
+        <p>
+          <strong>
+            Solo {item.stock} {item.stock === 1 ? "unidad" : "unidades"} ! 
+          </strong>
+        </p>
+      )}
 
-
-      {
-        isInCart(item.id) 
-            ? <Link to="/cart" className="btn btn-success"> Finalizar compra </Link>
-            : <ItemCounter
-            max={item.stock}
-            counter={counter}
-            setCounter={setCounter}
-            handleAgregar={handleAgregar}
-          />
-      }
+      {isInCart(item.id) ? (
+        <Link to="/cart" className="btn btn-success">
+          {" "}
+          Finalizar compra{" "}
+        </Link>
+      ) : (
+        <ItemCounter
+          max={item.stock}
+          counter={counter}
+          setCounter={setCounter}
+          handleAgregar={handleAgregar}
+        />
+      )}
 
       <button onClick={handlerVolver} className="btn btn-primary mx-2">
         Volver

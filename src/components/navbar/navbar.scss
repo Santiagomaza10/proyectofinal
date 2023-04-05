@@ -6,33 +6,34 @@
 
 
     .logo{
+        padding: 0.5rem 1.5rem;
+        font-size: 3rem ;
         display: flex;
         justify-content: center;
         align-items: center;
+        color: red;
 
-
-        img {
-            width: 3rem;
-            padding: 1.5rem 3rem;
-        }
-
-        h1 {
+        .title {
             font-size: 2rem;
+            padding-left: 1rem;
+            text-decoration: none;
+            color: black;
         }
     }
 
     .navbar {
 
         width: 40%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
             ul {
             list-style: none;
-            display: flex;
             gap: 3rem;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1rem;
+            
+            
             a {
                 font-size: 1.1rem;
                 text-decoration: none;

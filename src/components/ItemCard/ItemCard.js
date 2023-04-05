@@ -7,7 +7,14 @@ export const ItemCard = ({ item }) => {
       <img src={item.img} alt={item.name} />
       <p> {item.description} </p>
       <p>$ {item.price} </p>
-      <Link to={`/detail/${item.id}`} className="btn btn-primary">Ver más</Link>
+
+      {item.stock === 0 ? (
+        <p><strong>No hay stock del producto</strong></p>
+      ) : (
+        <Link to={`/detail/${item.id}`} className="btn btn-primary">
+          Ver más
+        </Link>
+      )}
     </div>
   );
 };
