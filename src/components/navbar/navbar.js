@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CartWidget } from "./cartwidget/CartWidget"
+import { CartWidget } from "./cartwidget/CartWidget.js"
 import { BsFire } from "react-icons/bs";
 import "./navbar.scss";
 
