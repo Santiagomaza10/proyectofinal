@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./cart.scss"
 
 
-export const CartWidget = () => {
+const CartWidget = () => {
 
     const { cart, totalCart } = useContext (CartContext)
 
@@ -17,3 +17,5 @@ export const CartWidget = () => {
         </Link>
     );
 };
+
+export default CartWidget
