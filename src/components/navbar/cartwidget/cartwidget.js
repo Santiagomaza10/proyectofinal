@@ -16,4 +16,4 @@ export const Cartwidget = () => {
             <span> {totalCart()} </span>
         </Link>
     );
-};
+};asdf
