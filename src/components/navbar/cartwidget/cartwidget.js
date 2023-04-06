@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./cart.scss"
 
 
-export const Cartwidget = () => {
+export const CartWidget = () => {
 
     const { cart, totalCart } = useContext (CartContext)
 
@@ -16,4 +16,4 @@ export const Cartwidget = () => {
             <span> {totalCart()} </span>
         </Link>
     );
-};asdf
+};

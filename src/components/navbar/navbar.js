@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Cartwidget } from "./cartwidget/CartWidget.js";
+import { CartWidget } from "./cartwidget/CartWidget"
 import { BsFire } from "react-icons/bs";
 import "./navbar.scss";
 
@@ -26,7 +26,7 @@ export const Navbar = () => {
 
         </ul>
 
-        <Cartwidget/>
+        <CartWidget></CartWidget>
 
       </nav>
       
