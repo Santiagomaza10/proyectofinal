@@ -17,24 +17,21 @@ export const Itemlistcontainer = ({ nombre, direccion, mail }) => {
 
     const productosRef = collection(db, "productos");
     const q = categoryId
-                ?  query(productosRef, where("category", "==", categoryId))
-                : productosRef
-    
+      ? query(productosRef, where("category", "==", categoryId))
+      : productosRef;
 
     getDocs(q)
-    
-    .then((res) => {
-      const docs = res.docs.map ((doc) => {
-        return {...doc.data (), id:doc.id}
+      .then((res) => {
+        const docs = res.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        });
+
+        setProductos(docs);
+      })
+
+      .finally(() => {
+        setLoading(false);
       });
-
-      setProductos(docs)
-
-    })
-
-    .finally (() => {
-      setLoading(false)
-    })
   }, [categoryId]);
 
   return (

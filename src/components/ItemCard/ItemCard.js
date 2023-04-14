@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./itemcard.scss"
 
 export const ItemCard = ({ item }) => {
   return (
-    <div>
+    <div className="itemcard">
       <h2> {item.name} </h2>
       <img src={item.img} alt={item.name} />
       <p> {item.description} </p>

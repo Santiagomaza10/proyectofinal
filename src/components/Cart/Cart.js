@@ -45,9 +45,13 @@ export const Cart = () => {
         ))}
 
         <h2>Total compra: $ {totalCompra()}</h2>
+
+          
+
         <button onClick={vaciarCarrito} className="btn btn-outline-danger">
           Vaciar carrito
         </button>
+        <Link className="btn btn-success mx-4" to="/checkout">Finalizar compra</Link>
       </div>
       
   );
