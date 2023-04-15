@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { Navigate } from "react-router-dom";
 import { db } from "../../firebase/config";
-import { collection, addDoc, writeBatch, query, where, documentId } from "firebase/firestore";
+import { collection, addDoc, writeBatch, query, where, documentId, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 export const Checkout = () => {
@@ -23,7 +23,7 @@ export const Checkout = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // validaciones (revisar con formik en ultima clase)
@@ -42,18 +42,37 @@ export const Checkout = () => {
 
     const batch = writeBatch(db)
 
-
     const ordersRef = collection(db, "orders");
     const productosRef = collection(db, "productos")
     
-    console.log(cart.map(prod => prod.id))
+    const outOfStock = []
 
-    /* const itemsRef = query (productosRef, where(documentId(), "in", cart.map(prod => prod.id ) ) ) */
+    const itemsRef = query (productosRef, where( documentId(), "in", cart.map(prod => prod.id ) ) )
 
+    const response = await getDocs(itemsRef)
 
+    response.docs.forEach((doc) => {
+      const item = cart.find(prod => prod.id === doc.id)
+      
+      if (doc.data().stock >= item.counter) {
+        batch.update(doc.ref, {
+          stock: doc.data().stock - item.counter
+        })
+      } else {
 
+        outOfStock.push(item)
 
+      }
+    })
 
+    if (outOfStock.length === 0) {
+
+      await batch.commit()
+
+    } else {
+
+      alert ("Hay items sin stock")
+    }
 
 
 
