@@ -6,7 +6,6 @@ export const ItemCard = ({ item }) => {
     <div className="itemcard">
       <h2> {item.name} </h2>
       <img src={item.img} alt={item.name} />
-      <p> {item.description} </p>
       <p>$ {item.price} </p>
 
       {item.stock === 0 ? (

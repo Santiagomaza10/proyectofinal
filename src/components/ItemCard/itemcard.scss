@@ -1,4 +1,17 @@
 .itemcard {
     width: 20rem;
+    height: 26rem;
     padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 6px 13px -4px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 5px 6px 13px -4px rgba(0,0,0,0.77);
+    -moz-box-shadow: 5px 6px 13px -4px rgba(0,0,0,0.77);
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }

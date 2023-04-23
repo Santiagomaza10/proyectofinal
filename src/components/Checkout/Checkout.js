@@ -70,7 +70,7 @@ export const Checkout = () => {
       await batch.commit()
 
     } else {
-
+        // armar un componente para informar que no hay stock de algun producto
       alert ("Hay items sin stock")
     }
 
