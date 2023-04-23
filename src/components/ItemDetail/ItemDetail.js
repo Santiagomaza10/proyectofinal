@@ -29,7 +29,7 @@ export const ItemDetail = ({ item }) => {
       <h2> {item.name} </h2>
       <img src={item.img} alt={item.name} />
       <p> {item.description} </p>
-      <p>$ {item.price} </p>
+      <p className="price">$ {item.price} </p>
 
       {item.stock <= 5 && (
         <p>
@@ -40,7 +40,7 @@ export const ItemDetail = ({ item }) => {
       )}
 
       {isInCart(item.id) ? (
-        <Link to="/cart" className="btn btn-success">
+        <Link to="/cart" className="btn btn-success m-2">
           {" "}
           Finalizar compra{" "}
         </Link>
@@ -56,6 +56,7 @@ export const ItemDetail = ({ item }) => {
       <button onClick={handlerVolver} className="btn btn-primary mx-2">
         Volver
       </button>
+
     </div>
   );
 };
